@@ -1,8 +1,5 @@
 from flask import Flask
 
-from azure.identity import DefaultAzureCredential
-from azure.keyvault.secrets import SecretClient
-
 app = Flask(__name__)
 
 # Save KEY VAULT URL in the web app application settings
