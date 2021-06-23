@@ -34,3 +34,7 @@ def index():
     # Show secret name and it's value in the response
     response = f'secret {name} value is {value}'
     return response
+
+##
+if __name__ == "__main__":
+    app.run(debug=True)
