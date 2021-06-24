@@ -8,8 +8,8 @@ from azure.keyvault.secrets import SecretClient
 app = Flask(__name__)
 
 # Save KEY VAULT URL in the web app application settings
-AZUE_KEY_VAULT_URL = "https://arashi22690kv02.vault.azure.net/"
-#AZUE_KEY_VAULT_URL = os.environ.get('https://arashi22690kv02.vault.azure.net/', '')
+#AZUE_KEY_VAULT_URL = "https://arashi22690kv02.vault.azure.net/"
+AZUE_KEY_VAULT_URL = os.environ.get('https://arashi22690kv02.vault.azure.net/', '')
 #AZUE_KEY_VAULT_URL = os.environ.get('AZUE_KEY_VAULT_URL', '')
 # AZUE_KEY_VAULT_URL = "https://keyvaultdemoapp.vault.azure.net/"
 
@@ -37,5 +37,5 @@ def index():
     return response
 
 ##
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+#    app.run(debug=True)
