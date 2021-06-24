@@ -1,4 +1,6 @@
 from flask import Flask
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
 
 app = Flask(__name__)
 
