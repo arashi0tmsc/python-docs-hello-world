@@ -36,6 +36,16 @@ def index():
     response = f'secret {name} value is {value}'
     return response
 
+@app.route('/secret2')
+def index2():
+    credential = DefaultAzureCredential()
+    secret_client = SecretClient(vault_url=AZUE_KEY_VAULT_URL, credential=credential)
+    secrets = secret_client.get_secret('arashi22690testkey02')
+    name = secrets.name
+    value = secrets.value
+    response = f'secret {name} value is {value}'
+    return response
+
 ##
 if __name__ == "__main__":
     app.run(debug=True)
